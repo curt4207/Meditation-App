@@ -1,4 +1,39 @@
-/*$ git remote add origin  <REMOTE_URL> 
-# Sets the new remote
-$ git remote -v
-# Verifies the new remote URL  */
+
+:root{
+    --DANDELION-PURP-red_pur-rgba: rgba(115, 2, 85, 1); 
+    --DANDELION-PURP-pur-rgba: rgba(81, 2, 115, 1); 
+    --DANDELION-PURP-org-rgba: rgba(217, 4, 4, 1); 
+    --DANDELION-PURP-red-rgba: rgba(140, 3, 3, 1); 
+    --DANDELION-PURP-blk-rgba: rgba(13, 13, 13, 1);
+/* Above are the colors I want to use. */
+}
+
+ body{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+.app{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.time-selection,
+.sound-picker,
+.player-container{
+    height: 80%;
+    flex: 1;
+}
+
+.time-selection{
+    background: var(--DANDELION-PURP-red_pur-rgba);
+}
+.sound-picker{
+    background: var(--DANDELION-PURP-org-rgba);
+}
+.player-container{
+    background:var(--DANDELION-PURP-blk-rgba); 
+}
