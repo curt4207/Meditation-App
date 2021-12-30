@@ -1,10 +1,10 @@
-
+/* Resources Used: youtube'r Dev Ed, kevin   */
 :root{
-    --DANDELION-PURP-red_pur-rgba: rgba(115, 2, 85, 1); 
-    --DANDELION-PURP-pur-rgba: rgba(81, 2, 115, 1); 
-    --DANDELION-PURP-org-rgba: rgba(217, 4, 4, 1); 
-    --DANDELION-PURP-red-rgba: rgba(140, 3, 3, 1); 
-    --DANDELION-PURP-blk-rgba: rgba(13, 13, 13, 1);
+    --DANDELION-red_pur-rgba: rgba(115, 2, 85, 1); 
+    --DANDELION-pur-rgba: rgba(81, 2, 115, 1); 
+    --DANDELION-org-rgba: rgba(217, 4, 4, 1); 
+    --DANDELION-red-rgba: rgba(140, 3, 3, 1); 
+    --DANDELION-blk-rgba: rgba(13, 13, 13, 1);
 /* Above are the colors I want to use. */
 }
 
@@ -24,16 +24,90 @@
 .time-selection,
 .sound-picker,
 .player-container{
-    height: 80%;
+    height: 85%;
     flex: 1;
-}
-
-.time-selection{
-    background: var(--DANDELION-PURP-red_pur-rgba);
-}
-.sound-picker{
-    background: var(--DANDELION-PURP-org-rgba);
+    display: flex;
+    flex-direction:column;
+    /* justify-content: space-evenly;
+    align-items:center; */
+    display: grid;
+    place-items: center;
 }
 .player-container{
-    background:var(--DANDELION-PURP-blk-rgba); 
+    position: relative;
+}
+.player-container svg{ /*play button*/
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.time-selection button{
+    margin: 20px;
+    padding: 20px;
+    background: var(--DANDELION-org-rgba);
+    color: var(--DANDELION-blk-rgba);
+    font-weight:normal;
+    font-size:22px;
+    font-family: fantasy;
+    border-radius: 50%;
+    
+}
+
+.time-selection button:hover{/*CHANGE LATER TO MATCH ORIGINAL colors I said. */
+    color: var(--DANDELION-org-rgba); 
+    background-color: aqua;
+    transition: all 5s ease;
+    
+}
+.sound-picker button{/* Sun Icon= "beach" and Cloud Icon= "rain" add more icons for different sounds.*/
+    
+    width: 120px;
+    height: 120px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 35px;
+    margin: 20px;
+}
+.sound-picker button img{
+    height: 100%;
+    padding: 4px;
+    
+}
+
+.sound-picker button:hover{
+    transform:translate(50%) scale(1.5);
+    transition: all 0.8s ease;
+    padding:20px;
+}
+.sound-picker button:nth-child(1){
+background: var(--DANDELION-pur-rgba);
+}
+.sound-picker button:nth-child(2){
+background: var(--DANDELION-red-rgba);
+}
+
+.video-container{
+    color:aqua;
+    
+    /* display:none; */
+}
+.time-display{
+    background:aqua;
+    position:absolute;
+    top: 0%;
+    font-size: 20px;
+}
+video{
+    height: 100%;
+    width: 100%;
+    position:fixed;
+    top: 0%;
+    z-index: -10;
 }
