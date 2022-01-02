@@ -33,7 +33,7 @@
 
 .time-selection,
 .sound-picker{
-    height: 30%;
+    height: 50%;
 }
 
 .player-container{
@@ -79,7 +79,7 @@
     border-radius: 30px;
     border-top-left-radius: 50%;
     padding: 15px;
-    margin: 0px;
+    margin: 10px;
 }
 .sound-picker button img{
     height: 100%;
