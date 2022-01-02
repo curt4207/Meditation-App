@@ -24,16 +24,20 @@
 .time-selection,
 .sound-picker,
 .player-container{
-    height: 85%;
     flex: 1;
     display: flex;
     flex-direction:column;
-    /* justify-content: space-evenly;
-    align-items:center; */
     display: grid;
     place-items: center;
 }
+
+.time-selection,
+.sound-picker{
+    height: 30%;
+}
+
 .player-container{
+    height: 85%;
     position: relative;
 }
 .player-container svg{ /*play button*/
@@ -43,6 +47,7 @@
     left:50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    
 }
 
 .time-selection button{
@@ -53,38 +58,38 @@
     font-weight:normal;
     font-size:22px;
     font-family: fantasy;
-    border-radius: 50%;
+    border-radius: 5%;
     
 }
 
 .time-selection button:hover{/*CHANGE LATER TO MATCH ORIGINAL colors I said. */
     color: var(--DANDELION-org-rgba); 
     background-color: aqua;
-    transition: all 5s ease;
+    transition: all 2s ease;
     
 }
-.sound-picker button{/* Sun Icon= "beach" and Cloud Icon= "rain" add more icons for different sounds.*/
-    
+
+
+.sound-picker button{
     width: 120px;
     height: 120px;
     background: none;
-    border: none;
+    border: outset black;
     cursor: pointer;
     border-radius: 30px;
-    font-size: 20px;
-    padding: 35px;
-    margin: 20px;
+    border-top-left-radius: 50%;
+    padding: 15px;
+    margin: 0px;
 }
 .sound-picker button img{
     height: 100%;
     padding: 4px;
-    
 }
 
 .sound-picker button:hover{
-    transform:translate(50%) scale(1.5);
+    transform:translate(20%) scale(1.5);
     transition: all 0.8s ease;
-    padding:20px;
+    padding: 20px;
 }
 .sound-picker button:nth-child(1){
 background: var(--DANDELION-pur-rgba);
@@ -92,22 +97,25 @@ background: var(--DANDELION-pur-rgba);
 .sound-picker button:nth-child(2){
 background: var(--DANDELION-red-rgba);
 }
+.sound-picker button:nth-child(3){
+    background: lightblue;
+}
 
 .video-container{
-    color:aqua;
-    
-    /* display:none; */
+   margin: 0%;
+   padding: 0%;
 }
 .time-display{
-    background:aqua;
     position:absolute;
-    top: 0%;
-    font-size: 20px;
+    top: 35%;
+    font-size: 40px;
+    font-weight:bolder;
+    font-family: fantasy;
 }
 video{
-    height: 100%;
-    width: 100%;
-    position:fixed;
-    top: 0%;
+   position: absolute;
+   top: 0%;
+
+
     z-index: -10;
 }
