@@ -1,3 +1,4 @@
+<!-- Resources Used:Youtube'r Dev Ed,  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +9,44 @@
     <title>Meditation App</title>
 </head>
 <body>
-    <div class="app">
-        <div class="time-selection"></div>
-        <div class="player-container"></div>/*for the play button add timer*/
-        <div class="sound-picker"></div>
+<div class="app">
+
+    <div class="video-container">
+        <video loop>
+            <source src="video/hard-rain.mp4" type="video/mp4">
+        </video>
     </div>
+
+<div class="time-selection">
+    <button data-time="120">2 Minutes</button>
+    <button data-time="240">4 Minutes</button>
+    <button data-time="480">8 Minutes</button>
+    <button data-time="600">10 Minutes</button>
+
+</div>
+<div class="player-container">
+    <audio class="song">
+        <source src="sounds/rain.mp3">
+    </audio>
+    <img src="./svg/play.svg" alt="play" class="play">
+    
+    <svg class="track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20"/>
+        </svg>
+        
+        <svg class="moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20"/>
+            </svg> <!--Note: this will animate in.-->
+            <h2 class="time-display">00:00</h2>
+</div><!--Note:For the play button add timer-->
+<div class="sound-picker">
+    <button data-sound="./sounds/rain.mp3" data-video="./video/hard-rain.mp4"><img src="./svg/rain.svg" alt="rain"></button>
+    
+    <button data-sound="./sounds/beach.mp3" data-video="./video/beach-palmTrees.mp4"><img src="./svg/beach.svg" alt="beach"></button>
+
+    <button data-sound="./sounds/Deep_Meditation.mp3" data-video="./video/dolphin.mp4"><img src="./png/Dolphin.png" alt="dolphin"></button>
+</div>
+</div>
 
 
     
